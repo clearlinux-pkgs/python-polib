@@ -4,13 +4,12 @@
 #
 Name     : python-polib
 Version  : 1.1.0
-Release  : 5
+Release  : 6
 URL      : https://pypi.io/packages/source/p/polib/polib-1.1.0.tar.gz
 Source0  : https://pypi.io/packages/source/p/polib/polib-1.1.0.tar.gz
 Summary  : A library to manipulate gettext files (po and mo files).
 Group    : Development/Tools
 License  : MIT
-Requires: python-polib-legacypython
 Requires: python-polib-python3
 Requires: python-polib-python
 BuildRequires : pbr
@@ -24,19 +23,9 @@ BuildRequires : setuptools
         polib
         =====
 
-%package legacypython
-Summary: legacypython components for the python-polib package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the python-polib package.
-
-
 %package python
 Summary: python components for the python-polib package.
 Group: Default
-Requires: python-polib-legacypython
 Requires: python-polib-python3
 
 %description python
@@ -60,25 +49,18 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1512065333
-python2 setup.py build -b py2
+export SOURCE_DATE_EPOCH=1523299666
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1512065333
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files python
 %defattr(-,root,root,-)

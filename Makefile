@@ -1,4 +1,5 @@
 PKG_NAME := python-polib
-URL := https://pypi.io/packages/source/p/polib/polib-1.1.0.tar.gz
+URL = https://pypi.io/packages/source/p/polib/polib-1.1.0.tar.gz
+ARCHIVES = 
 
 include ../common/Makefile.common
