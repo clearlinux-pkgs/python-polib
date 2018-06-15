@@ -14,7 +14,7 @@ Requires: python-polib-python3
 Requires: python-polib-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 
