@@ -4,7 +4,7 @@
 #
 Name     : python-polib
 Version  : 1.1.0
-Release  : 10
+Release  : 11
 URL      : https://pypi.io/packages/source/p/polib/polib-1.1.0.tar.gz
 Source0  : https://pypi.io/packages/source/p/polib/polib-1.1.0.tar.gz
 Summary  : A library to manipulate gettext files (po and mo files).
