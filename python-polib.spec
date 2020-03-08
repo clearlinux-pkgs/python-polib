@@ -4,10 +4,10 @@
 #
 Name     : python-polib
 Version  : 1.1.0
-Release  : 20
+Release  : 21
 URL      : https://pypi.io/packages/source/p/polib/polib-1.1.0.tar.gz
 Source0  : https://pypi.io/packages/source/p/polib/polib-1.1.0.tar.gz
-Summary  : A library to manipulate gettext files
+Summary  : A library to manipulate gettext files (po and mo files).
 Group    : Development/Tools
 License  : MIT
 Requires: python-polib-license = %{version}-%{release}
@@ -17,10 +17,8 @@ BuildRequires : buildreq-distutils3
 
 %description
 =====
-polib
-=====
-.. image:: https://img.shields.io/pypi/dm/polib.svg
-:alt: Downloads
+        polib
+        =====
 
 %package license
 Summary: license components for the python-polib package.
@@ -43,6 +41,7 @@ python components for the python-polib package.
 Summary: python3 components for the python-polib package.
 Group: Default
 Requires: python3-core
+Provides: pypi(polib)
 
 %description python3
 python3 components for the python-polib package.
@@ -57,8 +56,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583214598
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583697592
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
